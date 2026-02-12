@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI First Contact - Legal Case Management for Self-Represented Litigants</title>
+    <meta name="description" content="Legal research and case management services for California property and family law. Be the CEO of your own case with AI tools and expert verification.">
+    
+    <!-- LEGAL DISCLAIMER -->
+    <meta name="disclaimer" content="AI First Contact provides case management and legal research support services. We are not attorneys and do not provide legal advice. Our services are designed to help you organize your case and conduct research - they do not replace the advice of a licensed attorney.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #C77B7B 0%, #4A7BA7 100%);
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-container img {
+            height: 60px;
+            width: auto;
+        }
+
+        .logo-text {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #C77B7B 0%, #4A7BA7 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .tagline {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #E89B6D;
+            color: white;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(232,155,109,0.4);
+        }
+
+        .cta-button:hover {
+            background: #D88A5C;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(232,155,109,0.5);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section {
+            margin-bottom: 60px;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #C77B7B;
+            text-align: center;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .about-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            color: #4A7BA7;
+            margin-bottom: 15px;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        /* Core Philosophy */
+        .philosophy-box {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .philosophy-box h3 {
+            font-size: 2rem;
+            color: #C77B7B;
+            margin-bottom: 20px;
+        }
+
+        .philosophy-statement {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #4A7BA7;
+            font-style: italic;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-top: 4px solid #C77B7B;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: #4A7BA7;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .service-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #C77B7B;
+            margin-top: 15px;
+        }
+
+        /* Book Section */
+        .book-section {
+            background: linear-gradient(135deg, #C77B7B 0%, #4A7BA7 100%);
+            padding: 60px 20px;
+            margin: 60px 0;
+        }
+
+        .book-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .book-cover {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .book-info {
+            color: white;
+        }
+
+        .book-info h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .book-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            opacity: 0.95;
+        }
+
+        .book-info p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .book-cta {
+            display: inline-block;
+            background: white;
+            color: #C77B7B;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .book-cta:hover {
+            background: #f0f0f0;
+            transform: scale(1.05);
+        }
+
+        /* Bonus Chapter Section */
+        .bonus-section {
+            background: #f9f9f9;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .bonus-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .bonus-section h2 {
+            font-size: 2.5rem;
+            color: #C77B7B;
+            margin-bottom: 20px;
+        }
+
+        .bonus-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .bonus-list {
+            text-align: left;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .bonus-list h4 {
+            font-size: 1.5rem;
+            color: #4A7BA7;
+            margin-bottom: 20px;
+        }
+
+        .bonus-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .bonus-list li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        .bonus-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #C77B7B;
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .contact-info {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-info h2 {
+            font-size: 2.5rem;
+            color: #C77B7B;
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            font-size: 1.2rem;
+            margin: 15px 0;
+            color: #333;
+        }
+
+        .contact-item a {
+            color: #4A7BA7;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .tagline {
+                font-size: 1.3rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .about-image {
+                margin: 0 auto;
+            }
+
+            .book-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .bonus-list {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="Logo__AI_First_Contact_Final_Small.png" alt="AI First Contact Logo">
+                <span class="logo-text">AI First Contact</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>You're the CEO of Your Own Case</h1>
+            <p class="subtitle">Legal Research & Case Management for California Property and Family Law</p>
+            <div class="tagline">
+                Represented or Not—You Need to Be in Control
+            </div>
+            <a href="#bonus-chapter" class="cta-button">Get Your FREE Book</a>
+        </div>
+    </section>
+
+    <!-- About Angela Section -->
+    <section class="container section">
+        <h2>Meet Angela Chatterfield</h2>
+        <div class="about-grid">
+            <div class="about-image">
+                <img src="Angela_Chatterfield_Photo.jpg" alt="Angela Chatterfield">
+            </div>
+            <div class="about-text">
+                <h3>Author, Entrepreneur & Legal Case Management Specialist</h3>
+                <p>After navigating the challenges of the California family law system, I discovered that the business skills I had developed over decades apply directly to legal case management. The experience taught me that whether you have an attorney or not, staying organized and informed is critical to achieving the best possible outcome.</p>
+                <p>AI First Contact was born from this realization. I combined my book "Instant Response Revolution" with systematic case management principles to help others take control of their legal situations through better organization, strategic research support, and verified AI tools.</p>
+                <p><strong>My mission:</strong> Help self-represented litigants and represented clients become the CEO of their own case through systematic case management, legal research support, and AI tools verified by human expertise.</p>
+            </div>
+        </div>
+
+        <div class="philosophy-box">
+            <h3>Our Core Philosophy</h3>
+            <p class="philosophy-statement">"AI First. Verified Second. Managed Always."</p>
+            <p style="margin-top: 20px; font-size: 1.1rem;">We're pro-informed, not anti-lawyer. Whether you have an attorney or represent yourself, our services help you stay organized, informed, and in control of your case.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="container section">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Case Management</h3>
+                <p>Comprehensive contact management, deadline tracking, and document organization. Our AI system "Patrice" ensures nothing slips through the cracks while you focus on your case strategy.</p>
+                <p class="service-price">$500/month</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Legal Research Support</h3>
+                <p>Professional legal research by experienced VAs who verify AI-generated research, find relevant case law, and provide organized research memos for California family and property law.</p>
+                <p class="service-price">$500-$1,000/month</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Full-Service Package</h3>
+                <p>Complete case management + legal research + AI tools training. Perfect for complex cases requiring ongoing support and strategic coordination.</p>
+                <p class="service-price">$1,500/month</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Section -->
+    <section class="book-section">
+        <div class="book-content">
+            <img src="Book_Cover_with_Patrice.png" alt="Instant Response Revolution Book Cover" class="book-cover">
+            <div class="book-info">
+                <h2>Instant Response Revolution</h2>
+                <h3>How AI Empowers Solo Entrepreneurs</h3>
+                <p>The book that started it all. Learn how instant response and systematic contact management create competitive advantage for solo entrepreneurs.</p>
+                <p>Now featuring a bonus chapter: <strong>"When Life Becomes Your Business: AI First Contact for Legal Case Management"</strong></p>
+                <p>★★★★★ Amazon Reviews</p>
+                <a href="https://www.amazon.com/Instant-Response-Revolution-Entrepreneurs-Advantage/dp/B0FHFV84MM" target="_blank" class="book-cta">Get the Book on Amazon</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Book Offer Section -->
+    <section class="bonus-section" id="bonus-chapter">
+        <div class="bonus-content">
+            <h2>Get Your FREE Book + Bonus Chapter</h2>
+            <p style="font-size: 1.5rem; font-weight: 700; color: #C77B7B; margin-bottom: 20px;">$12.99 Value - Yours Absolutely FREE</p>
+            <p><strong>"Instant Response Revolution: How AI Empowers Solo Entrepreneurs"</strong></p>
+            <p>Plus the exclusive bonus chapter: <strong>"When Life Becomes Your Business: AI First Contact for Legal Case Management"</strong></p>
+
+            <div class="bonus-list">
+                <h4>What You'll Receive:</h4>
+                <ul>
+                    <li><strong>FREE Physical Book</strong> mailed directly to you ($12.99 value) - "Instant Response Revolution" with all the AI systems that apply to business AND legal case management</li>
+                    <li><strong>Exclusive Bonus Chapter</strong> (5,000+ words) - "When Life Becomes Your Business" - The CEO mindset for legal cases, contact management for legal situations, and systematic case management strategies</li>
+                    <li><strong>Special Reader Discount</strong> - 20% off first month of AI First Contact case management services (Code: READER2025)</li>
+                </ul>
+            </div>
+
+            <p style="font-size: 1.2rem; margin-bottom: 30px; font-weight: 600;"><strong>100% FREE. No shipping charges. No hidden fees.</strong></p>
+            
+            <!-- Lead Capture Form Placeholder -->
+            <div style="background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); max-width: 600px; margin: 0 auto;">
+                <h3 style="color: #C77B7B; margin-bottom: 25px; font-size: 1.5rem;">Request Your FREE Book</h3>
+                
+                <form style="text-align: left;">
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #333;">First Name *</label>
+                        <input type="text" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                    </div>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #333;">Last Name *</label>
+                        <input type="text" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                    </div>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #333;">Email Address *</label>
+                        <input type="email" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                    </div>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #333;">Phone Number *</label>
+                        <input type="tel" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                    </div>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #333;">What type of legal matter are you dealing with? *</label>
+                        <select required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                            <option value="">-- Select --</option>
+                            <option value="family">Family Law (Divorce, Custody, Support)</option>
+                            <option value="property">Property Management (Evictions, Tenant Issues)</option>
+                            <option value="both">Both Family Law and Property Management</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #333;">Do you have an existing family law case in California? *</label>
+                        <select required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                            <option value="">-- Select --</option>
+                            <option value="yes">Yes, I have an active case</option>
+                            <option value="no">No, not yet</option>
+                            <option value="considering">Considering filing soon</option>
+                            <option value="na">N/A - Property Management only</option>
+                        </select>
+                    </div>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #333;">Case Number (if applicable)</label>
+                        <input type="text" placeholder="e.g., 24D006286 (public information)" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        <p style="font-size: 0.85rem; color: #666; margin-top: 5px;">Case numbers are public record. This helps us verify eligibility and send relevant resources.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #333;">County where case is filed (if applicable)</label>
+                        <input type="text" placeholder="e.g., Orange County" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                    </div>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #333;">Are you currently represented by an attorney? *</label>
+                        <select required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                            <option value="">-- Select --</option>
+                            <option value="yes">Yes, I have an attorney</option>
+                            <option value="no">No, representing myself</option>
+                            <option value="had">I had an attorney but no longer do</option>
+                        </select>
+                    </div>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #333;">Mailing Address *</label>
+                        <input type="text" required placeholder="Street Address" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem; margin-bottom: 10px;">
+                        <input type="text" placeholder="Apt, Suite, etc. (optional)" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem; margin-bottom: 10px;">
+                        <input type="text" required placeholder="City" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem; margin-bottom: 10px;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                            <input type="text" required placeholder="State" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                            <input type="text" required placeholder="ZIP Code" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        </div>
+                    </div>
+                    
+                    <div style="margin-bottom: 25px; padding: 15px; background: #f9f9f9; border-radius: 8px;">
+                        <label style="display: flex; align-items: start; cursor: pointer;">
+                            <input type="checkbox" required style="margin-right: 10px; margin-top: 4px;">
+                            <span style="font-size: 0.95rem; line-height: 1.6;">I agree to receive the free book, bonus chapter, and occasional emails about AI First Contact services. I can unsubscribe at any time. I understand this is not legal advice and that AI First Contact does not provide legal advice.</span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" style="width: 100%; background: linear-gradient(135deg, #C77B7B 0%, #4A7BA7 100%); color: white; padding: 18px; border: none; border-radius: 50px; font-size: 1.2rem; font-weight: 700; cursor: pointer; transition: all 0.3s ease;">
+                        Send Me My FREE Book
+                    </button>
+                </form>
+                
+                <p style="margin-top: 20px; font-size: 0.9rem; color: #666; text-align: center;">
+                    <strong>Note:</strong> This form is a placeholder. Connect to your email service provider and fulfillment service to process book requests. Case information is used only to verify eligibility and provide relevant resources.
+                </p>
+            </div>
+
+            <p style="margin-top: 30px; font-size: 0.95rem; color: #666;">
+                We respect your privacy. Your information will only be used to mail your book and send occasional updates about AI First Contact. Unsubscribe anytime.
+            </p>
+        </div>
+    </section>
+
+    <!-- Legal Disclaimer Section -->
+    <section style="background: #fff3cd; padding: 40px 20px; border-top: 4px solid #ffc107; border-bottom: 4px solid #ffc107;">
+        <div class="container" style="max-width: 900px; text-align: center;">
+            <h3 style="color: #856404; font-size: 1.5rem; margin-bottom: 20px;">⚖️ Important Legal Disclaimer</h3>
+            <p style="color: #856404; font-size: 1.1rem; line-height: 1.8; margin-bottom: 15px;">
+                <strong>AI First Contact provides case management and legal research support services. We are NOT attorneys and do NOT provide legal advice.</strong>
+            </p>
+            <p style="color: #856404; font-size: 1rem; line-height: 1.6;">
+                Our services are designed to help you organize your case, track deadlines, manage contacts, and conduct legal research. These services do not replace the advice, representation, or services of a licensed attorney. For legal advice specific to your situation, please consult with a qualified California attorney. Nothing on this website or in our services creates an attorney-client relationship.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-info">
+            <h2>Free 15-Minute Phone Consultation</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 30px; color: #333;">How Can We Help?</p>
+            
+            <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); max-width: 400px; margin: 0 auto 30px;">
+                <p style="font-size: 1.1rem; color: #666; margin-bottom: 15px;">Call or text:</p>
+                <a href="tel:9495201057" style="font-size: 2.5rem; font-weight: 700; color: #4A7BA7; text-decoration: none; display: block; margin-bottom: 10px;">(949) 520-1057</a>
+                <p style="font-size: 0.95rem; color: #666;">Monday - Friday: 9 AM - 5 PM PST</p>
+            </div>
+            
+            <div class="contact-item" style="margin-bottom: 15px;">
+                <strong>Email:</strong> <a href="mailto:angela@aifirstcontact.com">angela@aifirstcontact.com</a>
+            </div>
+            <div class="contact-item" style="margin-bottom: 30px;">
+                <strong>Website:</strong> <a href="http://www.aifirstcontact.com" target="_blank">www.aifirstcontact.com</a>
+            </div>
+            
+            <div style="margin-top: 30px;">
+                <a href="#bonus-chapter" class="cta-button">Get Your FREE Book</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 AI First Contact. All rights reserved.</p>
+        <p>Serving California property and family law self-represented litigants</p>
+    </footer>
+</body>
+</html>
