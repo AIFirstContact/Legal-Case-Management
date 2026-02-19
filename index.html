@@ -547,30 +547,30 @@
             <div style="background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); max-width: 600px; margin: 0 auto;">
                 <h3 style="color: #C77B7B; margin-bottom: 25px; font-size: 1.5rem;">Request Your FREE Book</h3>
                 
-                <form style="text-align: left;">
+                <form action="https://formspree.io/f/xpqjlkvw" method="POST" style="text-align: left;">
                     <div style="margin-bottom: 20px;">
                         <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #333;">First Name *</label>
-                        <input type="text" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        <input type="text" name="first_name" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
                     </div>
                     
                     <div style="margin-bottom: 20px;">
                         <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #333;">Last Name *</label>
-                        <input type="text" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        <input type="text" name="last_name" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
                     </div>
                     
                     <div style="margin-bottom: 20px;">
                         <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #333;">Email Address *</label>
-                        <input type="email" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        <input type="email" name="email" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
                     </div>
                     
                     <div style="margin-bottom: 20px;">
                         <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #333;">Phone Number *</label>
-                        <input type="tel" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        <input type="tel" name="phone" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
                     </div>
                     
                     <div style="margin-bottom: 20px;">
                         <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #333;">What type of legal matter are you dealing with? *</label>
-                        <select required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        <select name="legal_matter_type" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
                             <option value="">-- Select --</option>
                             <option value="family">Family Law (Divorce, Custody, Support)</option>
                             <option value="property">Property Management (Evictions, Tenant Issues)</option>
@@ -581,7 +581,7 @@
                     
                     <div style="margin-bottom: 20px;">
                         <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #333;">Do you have an existing family law case in California? *</label>
-                        <select required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        <select name="has_active_case" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
                             <option value="">-- Select --</option>
                             <option value="yes">Yes, I have an active case</option>
                             <option value="no">No, not yet</option>
@@ -592,18 +592,18 @@
                     
                     <div style="margin-bottom: 20px;">
                         <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #333;">Case Number *</label>
-                        <input type="text" required placeholder="e.g., 24D006286" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        <input type="text" name="case_number" required placeholder="e.g., 24D006286" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
                         <p style="font-size: 0.85rem; color: #666; margin-top: 5px;">Required for verification. Case numbers are public record and will be verified before book shipment.</p>
                     </div>
                     
                     <div style="margin-bottom: 20px;">
                         <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #333;">County where case is filed *</label>
-                        <input type="text" required placeholder="e.g., Orange County" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        <input type="text" name="county" required placeholder="e.g., Orange County" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
                     </div>
                     
                     <div style="margin-bottom: 20px;">
                         <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #333;">Are you currently represented by an attorney? *</label>
-                        <select required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        <select name="has_attorney" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
                             <option value="">-- Select --</option>
                             <option value="yes">Yes, I have an attorney</option>
                             <option value="no">No, representing myself</option>
@@ -613,18 +613,18 @@
                     
                     <div style="margin-bottom: 20px;">
                         <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #333;">Mailing Address *</label>
-                        <input type="text" required placeholder="Street Address" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem; margin-bottom: 10px;">
-                        <input type="text" placeholder="Apt, Suite, etc. (optional)" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem; margin-bottom: 10px;">
-                        <input type="text" required placeholder="City" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem; margin-bottom: 10px;">
+                        <input type="text" name="address_street" required placeholder="Street Address" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem; margin-bottom: 10px;">
+                        <input type="text" name="address_apt" placeholder="Apt, Suite, etc. (optional)" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem; margin-bottom: 10px;">
+                        <input type="text" name="address_city" required placeholder="City" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem; margin-bottom: 10px;">
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-                            <input type="text" required placeholder="State" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
-                            <input type="text" required placeholder="ZIP Code" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                            <input type="text" name="address_state" required placeholder="State" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                            <input type="text" name="address_zip" required placeholder="ZIP Code" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
                         </div>
                     </div>
                     
                     <div style="margin-bottom: 25px; padding: 15px; background: #f9f9f9; border-radius: 8px;">
                         <label style="display: flex; align-items: start; cursor: pointer;">
-                            <input type="checkbox" required style="margin-right: 10px; margin-top: 4px;">
+                            <input type="checkbox" name="consent" required style="margin-right: 10px; margin-top: 4px;">
                             <span style="font-size: 0.95rem; line-height: 1.6;">I agree to receive the free book, bonus chapter, and occasional emails about AI First Contact services. I can unsubscribe at any time. I understand this is not legal advice and that AI First Contact does not provide legal advice.</span>
                         </label>
                     </div>
